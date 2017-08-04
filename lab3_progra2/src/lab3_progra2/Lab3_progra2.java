@@ -6,6 +6,7 @@
 package lab3_progra2;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -83,29 +84,191 @@ public class Lab3_progra2 {
                         }
                         break;
                         case "3": {//Integrantes
-                         String p="";
+                            String p = "";
                             for (Pueblo i : lista_pueblo) {
-                                p+="\n"+lista_pueblo.indexOf(i)+" "+i;
+                                p += "\n" + lista_pueblo.indexOf(i) + " " + i;
                             }
-                            int pueblo=Integer.parseInt(JOptionPane.showInputDialog(p+"\n"+"Ingrese Opcion de pueblo"));
-                        String l="";
-                            for (Lugar i: lista_pueblo.get(pueblo).getLugares()) {
-                                l+="\n"+lista_pueblo.get(pueblo).getLugares().indexOf(i)+" "+i;
+                            int pueblo = Integer.parseInt(JOptionPane.showInputDialog(p + "\n" + "Ingrese Opcion de pueblo"));
+                            String l = "";
+                            for (Lugar i : lista_pueblo.get(pueblo).getLugares()) {
+                                l += "\n" + lista_pueblo.get(pueblo).getLugares().indexOf(i) + " " + i;
                             }
-                            int lugar=Integer.parseInt(JOptionPane.showInputDialog(l+"\n"+"Ingrese opcion de lugar"));
-                            
+                            int lugar = Integer.parseInt(JOptionPane.showInputDialog(l + "\n" + "Ingrese opcion de lugar"));
+
                             /////////////////////////////////////////////////////////
-                            
-                            
+                            String o = JOptionPane.showInputDialog("Ingrese opcion \n"
+                                    + "1-Elfos \n"
+                                    + "2-Enanos \n"
+                                    + "3-Hobbits \n"
+                                    + "4-Hombre \n"
+                                    + "5-Maiar \n");
+                            switch (o) {
+                                case "1": {
+                                    String nombre=JOptionPane.showInputDialog("Ingrese nombre");
+                                    String Apellido=JOptionPane.showInputDialog("Apellido");
+                                    double altura=Double.parseDouble(JOptionPane.showInputDialog("altura"));
+                                    Date fecha_nacimiento=new Date();
+                                    String b="";
+                                    for (Bestia u : lista_bestias) {
+                                        b+="\n"+lista_bestias.indexOf(u)+" "+u;
+                                    }
+                                    int be=Integer.parseInt(JOptionPane.showInputDialog(o+""));
+                                    Bestia bestia;
+                                    double poder;
+                                    double ataque;
+                                    double defensa;
+                                    double curación;
+                                }
+                                break;
+                                case "2": {
+
+                                }
+                                break;
+                                case "3": {
+
+                                }
+                                break;
+                                case "4": {
+
+                                }
+                                break;
+                                case "5": {
+
+                                }
+                                break;
+                            }
+
                         }
                         break;
                         case "4": {//Bestias
+                            String op = JOptionPane.showInputDialog("Ingrese opcion \n"
+                                    + "1-Aguilas \n"
+                                    + "2-Arañas \n"
+                                    + "3-Balrogs \n"
+                                    + "4-Bestias Aladas \n"
+                                    + "5-Dragones \n");
 
+                            switch (op) {//Aguilas
+                                case "1": {
+                                    int garras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero garras"));
+                                    Boolean veneno = false;
+                                    String ven = JOptionPane.showInputDialog("Tiene veneno \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (ven.equals("1")) {
+                                        veneno = true;
+                                    } else {
+                                        veneno = false;
+                                    }
+
+                                    int defensa = Integer.parseInt(JOptionPane.showInputDialog("Nivel de defensa"));
+                                    int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
+                                    int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
+                                    int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
+                                    String color = JOptionPane.showInputDialog("Colo?");
+                                    lista_bestias.add(new Aguilas(color, garras, veneno, vida, defensa, ataque, curacion));
+                                    JOptionPane.showMessageDialog(null, "Hecho");
+                                }
+                                break;
+                                case "2": {//Arañas
+                                    int garras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero garras"));
+                                    Boolean veneno = false;
+                                    String ven = JOptionPane.showInputDialog("Tiene veneno \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (ven.equals("1")) {
+                                        veneno = true;
+                                    } else {
+                                        veneno = false;
+                                    }
+
+                                    int defensa = Integer.parseInt(JOptionPane.showInputDialog("Nivel de defensa"));
+                                    int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
+                                    int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
+                                    int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
+                                    String sexo = JOptionPane.showInputDialog("sexo");
+                                    lista_bestias.add(new Arañas(sexo, garras, veneno, vida, defensa, ataque, curacion));
+                                    JOptionPane.showMessageDialog(null, "Hecho");
+                                }
+                                break;
+                                case "3": {//Balrogs
+                                    int garras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero garras"));
+                                    Boolean veneno = false;
+                                    String ven = JOptionPane.showInputDialog("Tiene veneno \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (ven.equals("1")) {
+                                        veneno = true;
+                                    } else {
+                                        veneno = false;
+                                    }
+
+                                    int defensa = Integer.parseInt(JOptionPane.showInputDialog("Nivel de defensa"));
+                                    int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
+                                    int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
+                                    int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
+                                    Boolean latigo;
+                                    String l = JOptionPane.showInputDialog("Tienen latigo \n"
+                                            + "1-si \n"
+                                            + "2-no \n");
+                                    if (l.equals("1")) {
+                                        latigo = true;
+                                    } else {
+                                        latigo = false;
+                                    }
+                                    lista_bestias.add(new Balrogs(latigo, garras, veneno, vida, defensa, ataque, curacion));
+                                    JOptionPane.showInputDialog("Hecho");
+                                }
+                                break;
+                                case "4": {//Bestias aladas
+                                    int garras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero garras"));
+                                    Boolean veneno = false;
+                                    String ven = JOptionPane.showInputDialog("Tiene veneno \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (ven.equals("1")) {
+                                        veneno = true;
+                                    } else {
+                                        veneno = false;
+                                    }
+
+                                    int defensa = Integer.parseInt(JOptionPane.showInputDialog("Nivel de defensa"));
+                                    int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
+                                    int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
+                                    int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
+                                    double velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad"));
+                                    lista_bestias.add(new BestiasAladas(velocidad, garras, veneno, defensa, ataque, vida, curacion));
+                                    JOptionPane.showMessageDialog(null, "velocidad");
+                                }
+                                break;
+                                case "5": {//Dragones
+                                    int garras = Integer.parseInt(JOptionPane.showInputDialog("Ingrese numero garras"));
+                                    Boolean veneno = false;
+                                    String ven = JOptionPane.showInputDialog("Tiene veneno \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (ven.equals("1")) {
+                                        veneno = true;
+                                    } else {
+                                        veneno = false;
+                                    }
+
+                                    int defensa = Integer.parseInt(JOptionPane.showInputDialog("Nivel de defensa"));
+                                    int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
+                                    int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
+                                    int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
+                                    double long_ala = Double.parseDouble(JOptionPane.showInputDialog("lon ala"));
+                                    lista_bestias.add(new Dragones(long_ala, garras, veneno, defensa, ataque, vida, curacion));
+                                    JOptionPane.showMessageDialog(null, "hecho");
+                                }
+                                break;
+                            }
                         }
                         break;
                     }
                 }
                 break;
+
                 case "2": {//eliminar
 
                 }
