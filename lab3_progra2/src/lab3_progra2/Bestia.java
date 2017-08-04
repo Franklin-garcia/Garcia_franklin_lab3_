@@ -10,6 +10,7 @@ public class Bestia {
     private int ataque;
     private int vida;
     private int curacion;
+    
 
     public Bestia() {
     }
@@ -81,7 +82,11 @@ public class Bestia {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
+        return "{" + "garras=" + garras + ", veneno=" + veneno + ", defensa=" + defensa + ", ataque=" + ataque + ", vida=" + vida + ", curacion=" + curacion + '}';
+=======
         return "Bestia{" + "garras=" + garras + ", veneno=" + veneno + ", defensa=" + defensa + ", ataque=" + ataque + ", vida=" + vida + ", curacion=" + curacion + '}';
+>>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
     }
     
 }

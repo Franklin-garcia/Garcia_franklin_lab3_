@@ -30,5 +30,10 @@ public class Arañas extends Bestia{
         this.sexo = sexo;
     }
 
+    @Override
+    public String toString() {
+        return "Araña" + super.toString();
+    }
+
 
 }

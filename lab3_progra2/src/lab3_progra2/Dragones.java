@@ -25,5 +25,8 @@ public class Dragones extends Bestia{
     public void setLong_ala(double long_ala) {
         this.long_ala = long_ala;
     }
+  public String toString() {
+        return "Dragon" + super.toString();
+    }
     
 }

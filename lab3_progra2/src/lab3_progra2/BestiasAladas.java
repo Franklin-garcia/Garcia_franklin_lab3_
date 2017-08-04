@@ -24,7 +24,9 @@ public class BestiasAladas extends Bestia{
     public void setVelocidad(double velocidad) {
         this.velocidad = velocidad;
     }
-
+  public String toString() {
+        return "Bestia Alada" + super.toString();
+    }
   
     
 }

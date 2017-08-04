@@ -26,6 +26,8 @@ public class Balrogs extends Bestia{
     public void setLatigo(Boolean latigo) {
         this.latigo = latigo;
     }
-    
+      public String toString() {
+        return "Balrogs" + super.toString();
+    }
     
 }
