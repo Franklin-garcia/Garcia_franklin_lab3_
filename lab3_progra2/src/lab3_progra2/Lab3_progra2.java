@@ -103,11 +103,7 @@ public class Lab3_progra2 {
                                     + "4-Hombre \n"
                                     + "5-Maiar \n");
                             switch (o) {
-<<<<<<< HEAD
-                                case "1": {
-=======
                                 case "1": {//Elfos
->>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
                                     String nombre = JOptionPane.showInputDialog("Ingrese nombre");
                                     String Apellido = JOptionPane.showInputDialog("Apellido");
                                     double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
@@ -115,7 +111,6 @@ public class Lab3_progra2 {
                                     String b = "";
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
-<<<<<<< HEAD
                                     }
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(o + ""));
                                     Bestia bestia;
@@ -123,8 +118,7 @@ public class Lab3_progra2 {
                                     double ataque;
                                     double defensa;
                                     double curación;
-=======
-                                    }
+
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
@@ -146,10 +140,11 @@ public class Lab3_progra2 {
                                                 ataque, 443.00, 150.00, 335.00
                                         ));
                                     }
->>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
+
+                                    JOptionPane.showMessageDialog(null, "Hecho");
                                 }
-                                JOptionPane.showMessageDialog(null, "Hecho");
                                 break;
+
                                 case "2": {//enanos
                                     String nombre = JOptionPane.showInputDialog("Ingrese nombre");
                                     String Apellido = JOptionPane.showInputDialog("Apellido");
@@ -161,7 +156,7 @@ public class Lab3_progra2 {
                                     }
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);//Hay que hacer la bestia primero
-                                    
+
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
                                     boolean barba = false;
@@ -283,7 +278,6 @@ public class Lab3_progra2 {
                             }
 
                         }
-                        break;
 
                         case "4": {//Bestias
                             String op = JOptionPane.showInputDialog("Ingrese opcion \n"
@@ -411,11 +405,11 @@ public class Lab3_progra2 {
                                 }
                                 break;
                             }
+
                         }
                         break;
                     }
                 }
-                break;
 
                 case "2": {//eliminar
                     String r = JOptionPane.showInputDialog(null, "1-Eliminar Pueblo \n"
@@ -440,25 +434,25 @@ public class Lab3_progra2 {
                             String resp1;
                             int cont1 = 0;
                             JOptionPane.showMessageDialog(null, "A Continuacion se le muestran los pueblos");
-<<<<<<< HEAD
                             for (Bestia lb : lista_bestias) {
                                 JOptionPane.showMessageDialog(null, "[" + cont1 + "]" + lb);
-=======
-                            for (Bestia lp : lista_bestias) {
-                                JOptionPane.showMessageDialog(null, "[" + cont1 + "]" + lp);
->>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
-                                cont1++;
+                                for (Bestia lp : lista_bestias) {
+                                    JOptionPane.showMessageDialog(null, "[" + cont1 + "]" + lp);
+                                    cont1++;
+                                }
+                                resp1 = JOptionPane.showInputDialog(null, "Que posicion desea eliminar?");
+                                int respp1 = Integer.parseInt(resp1);
+                                lista_bestias.remove(respp1);
+                                break;
                             }
-                            resp1 = JOptionPane.showInputDialog(null, "Que posicion desea eliminar?");
-                            int respp1 = Integer.parseInt(resp1);
-                            lista_bestias.remove(respp1);
-                            break;
+                        case 3:
 
+                            break;
                     }
+                    break;
 
                 }
-                break;
-<<<<<<< HEAD
+
                 case "3": {//Modificar
                     int contad = 0;
                     String respuesta;
@@ -489,10 +483,6 @@ public class Lab3_progra2 {
                             }
                             respuesta2 = JOptionPane.showInputDialog(null, "Ingrese la posicion de la bestia que desea modificar");
                             respu2 = Integer.parseInt(respuesta2);
-=======
-                case "3": {//modificar
->>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
-
                             respuesta3 = JOptionPane.showInputDialog(null, "1-Modificar garras \n "
                                     + "2-Modificar veneno");
                             respu3 = Integer.parseInt(respuesta3);
@@ -501,12 +491,11 @@ public class Lab3_progra2 {
 
                                 modif = JOptionPane.showInputDialog(null, "Cuantas garras desea");
                                 mod = Integer.parseInt(modif);
-                                if (mod<6) {
-                                     lista_bestias.get(respu).setGarras(mod);
-                                }else   {
-                                JOptionPane.showMessageDialog(null, "No puede tener mas de 6 gradas");
+                                if (mod < 6) {
+                                    lista_bestias.get(respu).setGarras(mod);
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "No puede tener mas de 6 gradas");
                                 }
-                               
 
                             }
 
@@ -516,7 +505,7 @@ public class Lab3_progra2 {
                                 mod2 = Integer.parseInt(modif2);
                                 if (mod2 == 1) {
                                     lista_bestias.get(respu2).setVeneno(Boolean.TRUE);
-                                } else if(mod2==2) {
+                                } else if (mod2 == 2) {
                                     lista_bestias.get(respu2).setVeneno(Boolean.FALSE);
                                 }
 
@@ -526,8 +515,10 @@ public class Lab3_progra2 {
                 }
 
                 break;
+
                 case "4": {
 
+         
                 }
                 break;
             }
