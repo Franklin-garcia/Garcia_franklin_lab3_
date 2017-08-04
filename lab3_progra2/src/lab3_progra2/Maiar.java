@@ -13,14 +13,15 @@ import java.util.Date;
  */
 public class Maiar extends Integrante{
    private int baston;
-
+   private int sombrero;
     public Maiar() {
         super();
     }
 
-    public Maiar(int baston, String nombre, String Apellido, double altura, Date fecha_nacimiento, Bestia bestia, Double poder, Double ataque, Double defensa, Double curación) {
+    public Maiar(int baston,int sombrero, String nombre, String Apellido, double altura, Date fecha_nacimiento, Bestia bestia, Double poder, Double ataque, Double defensa, Double curación) {
         super(nombre, Apellido, altura, fecha_nacimiento, bestia, poder, ataque, defensa, curación);
         this.baston = baston;
+        this.sombrero=sombrero;
     }
 
     public int getBaston() {
@@ -29,6 +30,14 @@ public class Maiar extends Integrante{
 
     public void setBaston(int baston) {
         this.baston = baston;
+    }
+
+    public void setSombrero(int sombrero) {
+        this.sombrero = sombrero;
+    }
+
+    public int getSombrero() {
+        return sombrero;
     }
    
 }

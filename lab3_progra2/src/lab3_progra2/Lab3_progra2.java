@@ -213,9 +213,22 @@ public class Lab3_progra2 {
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
-                                    double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
-                                    double defensa = Double.parseDouble(JOptionPane.showInputDialog("Defensa"));
-                                    double curación = Double.parseDouble(JOptionPane.showInputDialog("Curacion"));
+
+                                    double ataque = 150;
+                                    double defensa = 140;
+                                    double curación = 50;
+                                    int army = Integer.parseInt(JOptionPane.showInputDialog("Arma \n"
+                                            + "1-Espada \n"
+                                            + "2-Lanza \n"
+                                            + "3-arco"));
+                                    if (army == 1) {
+                                        ataque = ataque + 150;
+                                    } else if (army == 2) {
+                                        ataque = ataque + 100;
+                                    } else if (army == 3) {
+                                        ataque = ataque + 50;
+                                    }
+
                                 }
                                 break;
                                 case "5": {//Maiar
@@ -233,6 +246,7 @@ public class Lab3_progra2 {
                                     double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
                                     double defensa = Double.parseDouble(JOptionPane.showInputDialog("Defensa"));
                                     double curación = Double.parseDouble(JOptionPane.showInputDialog("Curacion"));
+                                    
                                 }
                                 break;
                             }
@@ -404,7 +418,7 @@ public class Lab3_progra2 {
 
                 }
                 break;
-                case "3": {
+                case "3": {//modificar
 
                 }
                 break;
