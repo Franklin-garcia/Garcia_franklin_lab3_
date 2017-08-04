@@ -463,21 +463,21 @@ public class Lab3_progra2 {
                         case 4: {
                             String e = "";
                             for (Pueblo t : lista_pueblo) {
-                                e += "\n" + lista_pueblo.indexOf(t) + " " +t;
+                                e += "\n" + lista_pueblo.indexOf(t) + " " + t;
                             }
-                            int pue=Integer.parseInt(JOptionPane.showInputDialog(e+"\n"+"Cual pueblo"));
-                            
-                            String t="";
-                            for (Lugar i: lista_pueblo.get(pue).getLugares()) {
-                                 t+="\n"+lista_pueblo.get(pue).getLugares().indexOf(i)+" "+i;
+                            int pue = Integer.parseInt(JOptionPane.showInputDialog(e + "\n" + "Cual pueblo"));
+
+                            String t = "";
+                            for (Lugar i : lista_pueblo.get(pue).getLugares()) {
+                                t += "\n" + lista_pueblo.get(pue).getLugares().indexOf(i) + " " + i;
                             }
-                            int el=Integer.parseInt(JOptionPane.showInputDialog(t+"\n"+"Cual lugar"));
-                            
-                            String u="";
-                            for (Integrante i: lista_pueblo.get(pue).getLugares().get(el).getIntegrante()) {
-                                u+="\n"+lista_pueblo.get(pue).getLugares().get(el).getIntegrante().indexOf(i)+" "+i;
+                            int el = Integer.parseInt(JOptionPane.showInputDialog(t + "\n" + "Cual lugar"));
+
+                            String u = "";
+                            for (Integrante i : lista_pueblo.get(pue).getLugares().get(el).getIntegrante()) {
+                                u += "\n" + lista_pueblo.get(pue).getLugares().get(el).getIntegrante().indexOf(i) + " " + i;
                             }
-                            int y=Integer.parseInt(JOptionPane.showInputDialog(u+"\n"+"Cual integrante"));
+                            int y = Integer.parseInt(JOptionPane.showInputDialog(u + "\n" + "Cual integrante"));
                             lista_pueblo.get(pue).getLugares().get(el).getIntegrante().remove(y);
                             JOptionPane.showMessageDialog(null, "Hecho");
                         }
@@ -498,7 +498,8 @@ public class Lab3_progra2 {
                     int respu3;
                     int mod;
                     int mod2;
-                    respuesta = JOptionPane.showInputDialog(null, "1-Para modificar Pueblos \n"
+                    respuesta = JOptionPane.showInputDialog(null, ""
+                            + "1-Para modificar Pueblos \n"
                             + "2-Para modificar Bestias \n"
                             + "3-Para modificar Lugares \n");
 
@@ -506,7 +507,7 @@ public class Lab3_progra2 {
                     switch (respu) {
 
                         case 1: {
-
+                            
                         }
                         break;
 
@@ -544,6 +545,7 @@ public class Lab3_progra2 {
                                 }
 
                             }
+                            
                     }
                 }
 
