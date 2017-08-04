@@ -112,13 +112,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + ""));
-                                    Bestia bestia;
-                                    double poder;
-                                    double ataque;
-                                    double defensa;
-                                    double curación;
-
+                                  
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
