@@ -15,6 +15,7 @@ public class Hobits extends Integrante{
     private int anillo;
 
     public Hobits() {
+    super();
     }
 
     public Hobits(int anillo, String nombre, String Apellido, double altura, Date fecha_nacimiento, Bestia bestia, Double poder, Double ataque, Double defensa, Double curación) {

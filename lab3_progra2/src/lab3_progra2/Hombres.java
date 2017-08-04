@@ -15,6 +15,7 @@ public class Hombres extends Integrante{
     private int arma;
 
     public Hombres() {
+        super();
     }
 
     public Hombres(int arma) {

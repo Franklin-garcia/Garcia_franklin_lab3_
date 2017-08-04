@@ -12,17 +12,19 @@ import java.util.ArrayList;
  * @author Franklin Garcia
  */
 public class Pueblo {
-   public ArrayList <Integrante>Integrantes=new ArrayList();
+  private ArrayList<Lugar>lugares=new ArrayList();
 
     public Pueblo() {
     }
 
-    public ArrayList<Integrante> getIntegrantes() {
-        return Integrantes;
+    public ArrayList<Lugar> getLugares() {
+        return lugares;
     }
 
-    public void setIntegrantes(ArrayList<Integrante> Integrantes) {
-        this.Integrantes = Integrantes;
+    public void setLugares(ArrayList<Lugar> lugares) {
+        this.lugares = lugares;
     }
+
+  
     
 }
