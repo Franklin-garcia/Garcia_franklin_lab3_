@@ -112,7 +112,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
 
@@ -145,7 +145,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);//Hay que hacer la bestia primero
                                     
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
@@ -192,7 +192,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
@@ -211,7 +211,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
@@ -242,7 +242,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
                                     double ataque = 150;
