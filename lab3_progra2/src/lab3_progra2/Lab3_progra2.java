@@ -112,7 +112,7 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                  
+
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(b + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
@@ -407,7 +407,9 @@ public class Lab3_progra2 {
 
                 case "2": {//eliminar
                     String r = JOptionPane.showInputDialog(null, "1-Eliminar Pueblo \n"
-                            + "2-Eliminar Bestia"
+                            + "2-Eliminar Bestia \n"
+                            + "3-Elimianr lugares \n"
+                            + "4-Eliminar integrante \n"
                     );
                     int re = Integer.parseInt(r);
                     switch (re) {
@@ -439,14 +441,51 @@ public class Lab3_progra2 {
                                 lista_bestias.remove(respp1);
                                 break;
                             }
-                        case 3:
+                        case 3: {
+                            String e = "";
+                            for (Pueblo t : lista_pueblo) {
+                                e += "\n" + lista_pueblo.indexOf(t) + " " + t;
+                            }
+                            int pue = Integer.parseInt(JOptionPane.showInputDialog(e + "\n" + "Cual pueblo"));
 
-                            break;
+                            String t = "";
+                            for (Lugar i : lista_pueblo.get(pue).getLugares()) {
+                                t += "\n" + lista_pueblo.get(pue).getLugares().indexOf(i) + " " + i;
+                            }
+                            int el = Integer.parseInt(JOptionPane.showInputDialog(t + "\n" + "Cual lugar"));
+
+                            lista_pueblo.get(pue).getLugares().remove(el);
+                            JOptionPane.showMessageDialog(null, "Hecho");
+
+                        }
+                        break;
+
+                        case 4: {
+                            String e = "";
+                            for (Pueblo t : lista_pueblo) {
+                                e += "\n" + lista_pueblo.indexOf(t) + " " +t;
+                            }
+                            int pue=Integer.parseInt(JOptionPane.showInputDialog(e+"\n"+"Cual pueblo"));
+                            
+                            String t="";
+                            for (Lugar i: lista_pueblo.get(pue).getLugares()) {
+                                 t+="\n"+lista_pueblo.get(pue).getLugares().indexOf(i)+" "+i;
+                            }
+                            int el=Integer.parseInt(JOptionPane.showInputDialog(t+"\n"+"Cual lugar"));
+                            
+                            String u="";
+                            for (Integrante i: lista_pueblo.get(pue).getLugares().get(el).getIntegrante()) {
+                                u+="\n"+lista_pueblo.get(pue).getLugares().get(el).getIntegrante().indexOf(i)+" "+i;
+                            }
+                            int y=Integer.parseInt(JOptionPane.showInputDialog(u+"\n"+"Cual integrante"));
+                            lista_pueblo.get(pue).getLugares().get(el).getIntegrante().remove(y);
+                            JOptionPane.showMessageDialog(null, "Hecho");
+                        }
+                        break;
+
                     }
-                    break;
 
                 }
-
                 case "3": {//Modificar
                     int contad = 0;
                     String respuesta;
@@ -466,9 +505,10 @@ public class Lab3_progra2 {
                     respu = Integer.parseInt(respuesta);
                     switch (respu) {
 
-                        case 1:
+                        case 1: {
 
-                            break;
+                        }
+                        break;
 
                         case 2:
                             for (Bestia mb : lista_bestias) {
@@ -512,7 +552,6 @@ public class Lab3_progra2 {
 
                 case "4": {
 
-         
                 }
                 break;
             }
