@@ -311,9 +311,64 @@ public class Lab3_progra2 {
 
                 }
                 break;
-                case "3": {
-
+                case "3": {//Modificar
+                    int contad=0;
+                    String respuesta;
+                    String respuesta2;
+                    String respuesta3;
+                    int respu;
+                    int respu2;
+                    int respu3;
+                    respuesta=JOptionPane.showInputDialog(null, "1-Para modificar Pueblos \n"
+                    +"2-Para modificar Bestias \n"
+                    +"3-Para modificar Lugares \n");
+                    
+                    respu=Integer.parseInt(respuesta);
+                    switch  (respu){
+                    
+                        case 1:
+                           
+                            
+                            break;
+                            
+                            
+                        case 2:
+                            for (Bestia mb : lista_bestias) {
+                                JOptionPane.showMessageDialog(null,"["+contad+"]"+ mb);
+                                contad++;
+                            }
+                            respuesta2=JOptionPane.showInputDialog(null, "Ingrese la posicion de la bestia que desea modificar");
+                            respu2=Integer.parseInt(respuesta2);
+                           
+                            respuesta3=JOptionPane.showInputDialog(null, "1-Modificar garras \n "
+                                    +"2-Modificar veneno");
+                            respu3=Integer.parseInt(respuesta3);
+                            
+                            switch(respu3){
+                                
+                                
+                                case 1:
+                                   // JOptionPane
+                                 //   lista_bestias.get(respu).setGarras(contad);
+                                    
+                                    break;
+                                    
+                                    
+                                case 2:
+                                    
+                                    
+                                    break;
+                            
+                            
+                            }
+                            break;
+                    
+                    
+                    
+                    }
                 }
+                
+                
                 break;
                 case "4": {
 
