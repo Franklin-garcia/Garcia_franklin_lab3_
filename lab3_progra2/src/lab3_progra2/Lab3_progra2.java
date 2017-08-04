@@ -228,7 +228,8 @@ public class Lab3_progra2 {
                                     } else if (army == 3) {
                                         ataque = ataque + 50;
                                     }
-
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Hombres());
+                                    JOptionPane.showMessageDialog(null, "Hecho");
                                 }
                                 break;
                                 case "5": {//Maiar
@@ -243,16 +244,32 @@ public class Lab3_progra2 {
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
-                                    double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
-                                    double defensa = Double.parseDouble(JOptionPane.showInputDialog("Defensa"));
-                                    double curación = Double.parseDouble(JOptionPane.showInputDialog("Curacion"));
-                                    
+                                    double ataque = 150;
+                                    double defensa = 140;
+                                    double curación = 50;
+
+                                    int sombrero = Integer.parseInt(JOptionPane.showInputDialog("Tiene sombrero \n"
+                                            + "1-si \n"
+                                            + "2-no \n"));
+                                    if (sombrero == 1) {
+                                        curación = curación + 200;
+                                        ataque = ataque + 200;
+                                    }
+                                    int baston = Integer.parseInt(JOptionPane.showInputDialog("Tiene baston \n"
+                                            + "1-si \n"
+                                            + "2-no \n"));
+                                    if (baston == 1) {
+                                        ataque = ataque + 200;
+                                    }
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Maiar(baston, sombrero, nombre, Apellido, altura, fecha_nacimiento, bestia, poder, ataque, defensa, curación));
+                                    JOptionPane.showMessageDialog(null, "Hecho");
                                 }
                                 break;
                             }
 
                         }
                         break;
+
                         case "4": {//Bestias
                             String op = JOptionPane.showInputDialog("Ingrese opcion \n"
                                     + "1-Aguilas \n"
