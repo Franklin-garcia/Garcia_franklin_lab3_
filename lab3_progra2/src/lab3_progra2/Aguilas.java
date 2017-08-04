@@ -1,9 +1,6 @@
 
 package lab3_progra2;
 
-
-
-
 public class Aguilas extends Bestia{
     
         private String color;

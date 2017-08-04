@@ -13,8 +13,12 @@ import java.util.ArrayList;
  */
 public class Pueblo {
   private ArrayList<Lugar>lugares=new ArrayList();
-
+  private String nombre;
     public Pueblo() {
+    }
+
+    public Pueblo(String nombre) {
+        this.nombre = nombre;
     }
 
     public ArrayList<Lugar> getLugares() {
@@ -25,6 +29,18 @@ public class Pueblo {
         this.lugares = lugares;
     }
 
-  
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
+
     
 }
