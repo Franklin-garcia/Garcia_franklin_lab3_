@@ -1,15 +1,76 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab3_progra2;
 
-/**
- *
- * @author Franklin Garcia
- */
 public class Bestia {
- 
- 
+
+    private int garras;
+    private Boolean veneno;
+    private int defensa;
+    private int ataque;
+    private int vida;
+    private int curacion;
+
+    public Bestia() {
+    }
+
+    public Bestia(int garras, Boolean veneno, int defensa, int ataque, int vida, int curacion) {
+        this.garras = garras;
+        this.veneno = veneno;
+        this.defensa = defensa;
+        this.ataque = ataque;
+        this.vida = vida;
+        this.curacion = curacion;
+    }
+
+    public int getGarras() {
+        return garras;
+    }
+
+    public void setGarras(int garras) {
+        if (garras<=6) {
+             this.garras = garras;
+        }
+    }
+
+    public Boolean getVeneno() {
+        return veneno;
+    }
+
+    public void setVeneno(Boolean veneno) {
+        this.veneno = veneno;
+    }
+
+    public int getDefensa() {
+        return defensa;
+    }
+
+    public void setDefensa(int defensa) {
+        this.defensa = defensa;
+    }
+
+    public int getAtaque() {
+        return ataque;
+    }
+
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        if (vida>=50 && vida <=150) {
+             this.vida = vida;
+        }
+    }
+
+    public int getCuracion() {
+        return curacion;
+    }
+
+    public void setCuracion(int curacion) {
+        this.curacion = curacion;
+    }
+    
 }
