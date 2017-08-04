@@ -146,7 +146,8 @@ public class Lab3_progra2 {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
-                                    Bestia bestia = lista_bestias.get(be);
+                                    Bestia bestia = lista_bestias.get(be);//Hay que hacer la bestia primero
+                                    
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
                                     boolean barba = false;

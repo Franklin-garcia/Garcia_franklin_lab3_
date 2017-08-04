@@ -78,5 +78,10 @@ public class Bestia {
     public void setCuracion(int curacion) {
         this.curacion = curacion;
     }
+
+    @Override
+    public String toString() {
+        return "Bestia{" + "garras=" + garras + ", veneno=" + veneno + ", defensa=" + defensa + ", ataque=" + ataque + ", vida=" + vida + ", curacion=" + curacion + '}';
+    }
     
 }
