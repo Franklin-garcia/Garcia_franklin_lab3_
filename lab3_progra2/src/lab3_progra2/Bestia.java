@@ -1,5 +1,7 @@
 package lab3_progra2;
 
+import javax.swing.JOptionPane;
+
 public class Bestia {
 
     private int garras;
@@ -28,6 +30,8 @@ public class Bestia {
     public void setGarras(int garras) {
         if (garras<=6) {
              this.garras = garras;
+        }else {
+        JOptionPane.showMessageDialog(null, "Como maximo se aceptan 6 garras");
         }
     }
 
@@ -62,6 +66,8 @@ public class Bestia {
     public void setVida(int vida) {
         if (vida>=50 && vida <=150) {
              this.vida = vida;
+        }else {
+            JOptionPane.showMessageDialog(null, "La vida debe ser mayor a 50 y menor a 150");
         }
     }
 
