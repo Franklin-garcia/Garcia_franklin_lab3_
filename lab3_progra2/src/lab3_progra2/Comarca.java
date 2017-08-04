@@ -18,7 +18,7 @@ public class Comarca extends Lugar {
         super();
     }
 
-    public Comarca(boolean hobbit, int casas, int extension, int integrantes) {
+    public Comarca(int casas, int extension, int integrantes) {
         super(extension, integrantes);
         this.hobbit = hobbit;
         this.casas = casas;
