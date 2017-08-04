@@ -20,6 +20,7 @@ public class Lab3_progra2 {
     public static void main(String[] args) {
         String opcion = "";
         ArrayList<Pueblo> lista_pueblo = new ArrayList();
+        ArrayList<Bestia>lista_bestias=new ArrayList();
         while (!opcion.equalsIgnoreCase("5")) {
             opcion = JOptionPane.showInputDialog("Ingrese opcion \n"
                     + "1-Agregar \n"
@@ -62,13 +63,14 @@ public class Lab3_progra2 {
                                        int parajes=Integer.parseInt(JOptionPane.showInputDialog("Parajes"));
                                        int extension=Integer.parseInt(JOptionPane.showInputDialog("Extension territorio"));
                                        int numero=Integer.parseInt(JOptionPane.showInputDialog("numero de integrantes"));
-                                       lista_pueblo.get(op).getLugares().add(new Gondor());
+                                       lista_pueblo.get(op).getLugares().add(new Gondor(parajes,extension,numero));
                                        JOptionPane.showMessageDialog(null, "Hecho");
                                    }break;
                                    case "3":{//Mordor
-                                       
+                                       int guardianes=Integer.parseInt(JOptionPane.showInputDialog("Numero guardianes"));
                                        int extension=Integer.parseInt(JOptionPane.showInputDialog("Extension territorio"));
                                        int numero=Integer.parseInt(JOptionPane.showInputDialog("numero de integrantes"));
+                                       lista_pueblo.get(op).getLugares().add(new Mordor(guardianes,extension,numero));
                                        JOptionPane.showMessageDialog(null, "Hecho");
                                    }break;
                                    
@@ -84,7 +86,7 @@ public class Lab3_progra2 {
                        }
                 }
                 break;
-                case "2": {
+                case "2": {//eliminar
 
                 }
                 break;
