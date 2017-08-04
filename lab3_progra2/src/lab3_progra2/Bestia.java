@@ -10,6 +10,7 @@ public class Bestia {
     private int ataque;
     private int vida;
     private int curacion;
+    
 
     public Bestia() {
     }
@@ -77,6 +78,11 @@ public class Bestia {
 
     public void setCuracion(int curacion) {
         this.curacion = curacion;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + "garras=" + garras + ", veneno=" + veneno + ", defensa=" + defensa + ", ataque=" + ataque + ", vida=" + vida + ", curacion=" + curacion + '}';
     }
     
 }

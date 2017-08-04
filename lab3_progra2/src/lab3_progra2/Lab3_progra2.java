@@ -96,7 +96,7 @@ public class Lab3_progra2 {
                             int lugar = Integer.parseInt(JOptionPane.showInputDialog(l + "\n" + "Ingrese opcion de lugar"));
 
                             /////////////////////////////////////////////////////////
-<<<<<<< HEAD
+
                             String o = JOptionPane.showInputDialog("Ingrese opcion \n"
                                     + "1-Elfos \n"
                                     + "2-Enanos \n"
@@ -166,7 +166,7 @@ public class Lab3_progra2 {
                                     int ataque = Integer.parseInt(JOptionPane.showInputDialog("Nivel ataque"));
                                     int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
                                     int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
-                                    String color = JOptionPane.showInputDialog("Colo?");
+                                    String color = JOptionPane.showInputDialog("Color?");
                                     lista_bestias.add(new Aguilas(color, garras, veneno, vida, defensa, ataque, curacion));
                                     JOptionPane.showMessageDialog(null, "Hecho");
                                 }
@@ -188,6 +188,9 @@ public class Lab3_progra2 {
                                     int vida = Integer.parseInt(JOptionPane.showInputDialog("Vida"));
                                     int curacion = Integer.parseInt(JOptionPane.showInputDialog("Nivel de curacion"));
                                     String sexo = JOptionPane.showInputDialog("sexo");
+                                    if (sexo.equals("femenino")) {
+                                        vida+=50;
+                                    }
                                     lista_bestias.add(new Arañas(sexo, garras, veneno, vida, defensa, ataque, curacion));
                                     JOptionPane.showMessageDialog(null, "Hecho");
                                 }
@@ -218,7 +221,7 @@ public class Lab3_progra2 {
                                         latigo = false;
                                     }
                                     lista_bestias.add(new Balrogs(latigo, garras, veneno, vida, defensa, ataque, curacion));
-                                    JOptionPane.showInputDialog("Hecho");
+                                    JOptionPane.showMessageDialog(null ,"Hecho");
                                 }
                                 break;
                                 case "4": {//Bestias aladas
@@ -293,9 +296,9 @@ public class Lab3_progra2 {
                             String resp1;
                             int cont1=0;
                             JOptionPane.showMessageDialog(null, "A Continuacion se le muestran los pueblos");
-                            for (Bestia lp : lista_bestias) {
-                                JOptionPane.showMessageDialog(null, "["+cont1+"]"+lp );
-                                cont1++;
+                            for (Bestia lb : lista_bestias) {
+                                JOptionPane.showMessageDialog(null, "["+cont1+"]"+lb);
+                               cont1++;
                             }
                             resp1=JOptionPane.showInputDialog(null, "Que posicion desea eliminar?" );
                             int respp1=Integer.parseInt(resp1);
