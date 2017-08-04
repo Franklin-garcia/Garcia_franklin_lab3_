@@ -96,6 +96,7 @@ public class Lab3_progra2 {
                             int lugar = Integer.parseInt(JOptionPane.showInputDialog(l + "\n" + "Ingrese opcion de lugar"));
 
                             /////////////////////////////////////////////////////////
+<<<<<<< HEAD
                             String o = JOptionPane.showInputDialog("Ingrese opcion \n"
                                     + "1-Elfos \n"
                                     + "2-Enanos \n"
@@ -270,6 +271,40 @@ public class Lab3_progra2 {
                 break;
 
                 case "2": {//eliminar
+                    String r=JOptionPane.showInputDialog(null, "1-Eliminar Pueblo \n"
+                            + "2-Eliminar Bestia"
+                    );
+                    int re=Integer.parseInt(r);
+                    switch(re){
+                        case 1:
+                            String resp;
+                            int cont=0;
+                            JOptionPane.showMessageDialog(null, "A Continuacion se le muestran los pueblos");
+                            for (Pueblo lp : lista_pueblo) {
+                                JOptionPane.showMessageDialog(null, "["+cont+"]"+lp );
+                                cont++;
+                            }
+                            resp=JOptionPane.showInputDialog(null, "Que posicion desea eliminar?" );
+                            int respp=Integer.parseInt(resp);
+                            lista_pueblo.remove(respp);
+                            break;
+                            
+                        case 2:
+                            String resp1;
+                            int cont1=0;
+                            JOptionPane.showMessageDialog(null, "A Continuacion se le muestran los pueblos");
+                            for (Bestia lp : lista_bestias) {
+                                JOptionPane.showMessageDialog(null, "["+cont1+"]"+lp );
+                                cont1++;
+                            }
+                            resp1=JOptionPane.showInputDialog(null, "Que posicion desea eliminar?" );
+                            int respp1=Integer.parseInt(resp1);
+                            lista_bestias.remove(respp1);
+                            break;
+                            
+                    
+                    
+                    }
 
                 }
                 break;
