@@ -10,5 +10,6 @@ package lab3_progra2;
  * @author Franklin Garcia
  */
 public class Bestia {
-    
+ 
+ 
 }

@@ -5,10 +5,33 @@
  */
 package lab3_progra2;
 
+import java.util.Date;
+
 /**
  *
  * @author Franklin Garcia
  */
-public class Hombres {
-    
+public class Hombres extends Integrante{
+    private int arma;
+
+    public Hombres() {
+    }
+
+    public Hombres(int arma) {
+        this.arma = arma;
+    }
+
+    public Hombres(int arma, String nombre, String Apellido, double altura, Date fecha_nacimiento, Bestia bestia, Double poder, Double ataque, Double defensa, Double curación) {
+        super(nombre, Apellido, altura, fecha_nacimiento, bestia, poder, ataque, defensa, curación);
+        this.arma = arma;
+    }
+
+    public int getArma() {
+        return arma;
+    }
+
+    public void setArma(int arma) {
+        this.arma = arma;
+    }
+   
 }
