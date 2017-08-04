@@ -544,7 +544,6 @@ public class Lab3_progra2 {
                                 }
 
                             }
-
                     }
                 }
 
