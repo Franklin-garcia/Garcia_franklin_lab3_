@@ -66,6 +66,7 @@ public class Lab3_progra2 {
                                        JOptionPane.showMessageDialog(null, "Hecho");
                                    }break;
                                    case "3":{//Mordor
+                                       
                                        int extension=Integer.parseInt(JOptionPane.showInputDialog("Extension territorio"));
                                        int numero=Integer.parseInt(JOptionPane.showInputDialog("numero de integrantes"));
                                        JOptionPane.showMessageDialog(null, "Hecho");
