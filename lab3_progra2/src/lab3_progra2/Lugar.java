@@ -47,5 +47,10 @@ public class Lugar {
     public void setIntegrante(ArrayList<Integrante> integrante) {
         this.integrante = integrante;
     }
+
+    @Override
+    public String toString() {
+        return "Lugar{" + "extension=" + extension + ", integrantes=" + integrantes  + '}';
+    }
  
 }
