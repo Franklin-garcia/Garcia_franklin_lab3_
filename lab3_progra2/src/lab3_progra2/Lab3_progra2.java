@@ -194,9 +194,11 @@ public class Lab3_progra2 {
                                     int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
                                     Bestia bestia = lista_bestias.get(be);
                                     double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
-                                    double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
-                                    double defensa = Double.parseDouble(JOptionPane.showInputDialog("Defensa"));
-                                    double curación = Double.parseDouble(JOptionPane.showInputDialog("Curacion"));
+
+                                    int anillo = Integer.parseInt(JOptionPane.showInputDialog("Numero anillos"));
+
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Hobits(anillo, nombre, Apellido, altura, fecha_nacimiento, bestia,
+                                            poder, 10.00 * anillo, 100.00 * anillo, 1.00 * anillo));
                                 }
                                 break;
                                 case "4": {//Hombre
