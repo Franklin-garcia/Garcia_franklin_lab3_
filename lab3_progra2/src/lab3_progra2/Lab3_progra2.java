@@ -103,7 +103,54 @@ public class Lab3_progra2 {
                                     + "4-Hombre \n"
                                     + "5-Maiar \n");
                             switch (o) {
+<<<<<<< HEAD
                                 case "1": {
+=======
+                                case "1": {//Elfos
+>>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
+                                    String nombre = JOptionPane.showInputDialog("Ingrese nombre");
+                                    String Apellido = JOptionPane.showInputDialog("Apellido");
+                                    double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
+                                    Date fecha_nacimiento = new Date();
+                                    String b = "";
+                                    for (Bestia u : lista_bestias) {
+                                        b += "\n" + lista_bestias.indexOf(u) + " " + u;
+<<<<<<< HEAD
+                                    }
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + ""));
+                                    Bestia bestia;
+                                    double poder;
+                                    double ataque;
+                                    double defensa;
+                                    double curación;
+=======
+                                    }
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    Bestia bestia = lista_bestias.get(be);
+                                    double ataque = Double.parseDouble(JOptionPane.showInputDialog("ataque"));
+
+                                    boolean arma = false;
+                                    String army = JOptionPane.showInputDialog("Tiene arma \n"
+                                            + "1-si \n"
+                                            + "2-No \n");
+                                    if (army.equals("1")) {
+                                        arma = true;
+                                        lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Elfos(
+                                                arma, nombre, Apellido, altura, fecha_nacimiento, bestia,
+                                                ataque, 443.00 + 10, 150.00 + 10, 335.00 + 10
+                                        ));
+                                    } else {
+                                        arma = false;
+                                        lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Elfos(
+                                                arma, nombre, Apellido, altura, fecha_nacimiento, bestia,
+                                                ataque, 443.00, 150.00, 335.00
+                                        ));
+                                    }
+>>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
+                                }
+                                JOptionPane.showMessageDialog(null, "Hecho");
+                                break;
+                                case "2": {//enanos
                                     String nombre = JOptionPane.showInputDialog("Ingrese nombre");
                                     String Apellido = JOptionPane.showInputDialog("Apellido");
                                     double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
@@ -112,34 +159,132 @@ public class Lab3_progra2 {
                                     for (Bestia u : lista_bestias) {
                                         b += "\n" + lista_bestias.indexOf(u) + " " + u;
                                     }
-                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + ""));
-                                    Bestia bestia;
-                                    double poder;
-                                    double ataque;
-                                    double defensa;
-                                    double curación;
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    Bestia bestia = lista_bestias.get(be);//Hay que hacer la bestia primero
+                                    
+                                    double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
+
+                                    boolean barba = false;
+                                    boolean hacha = false;
+
+                                    Double ataque = 300.00, defensa = 200.00, curacion = 50.00;
+
+                                    String Bar = JOptionPane.showInputDialog("Tiene barba \n"
+                                            + "1-Si \n"
+                                            + "2-No \n");
+                                    if (Bar.equals("1")) {
+                                        ataque = ataque + 50;
+                                        defensa = defensa + 50;
+                                        curacion = curacion + 50;
+                                        barba = true;
+                                    } else {
+                                        barba = false;
+                                    }
+                                    String ha = JOptionPane.showInputDialog("Tenemos hacha \n"
+                                            + "1-si \n"
+                                            + "2-No \n");
+                                    if (ha.equals("1")) {
+                                        ataque = ataque + 50;
+                                        defensa = defensa + 50;
+                                        curacion = curacion + 50;
+                                        hacha = true;
+                                    } else {
+                                        barba = false;
+                                    }
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(
+                                            new Enanos(barba, hacha, nombre, Apellido, altura, fecha_nacimiento,
+                                                    bestia, poder, ataque, defensa, curacion));
+                                    JOptionPane.showMessageDialog(null, "hecho");
                                 }
                                 break;
-                                case "2": {
+                                case "3": {//Hobits
+                                    String nombre = JOptionPane.showInputDialog("Ingrese nombre");
+                                    String Apellido = JOptionPane.showInputDialog("Apellido");
+                                    double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
+                                    Date fecha_nacimiento = new Date();
+                                    String b = "";
+                                    for (Bestia u : lista_bestias) {
+                                        b += "\n" + lista_bestias.indexOf(u) + " " + u;
+                                    }
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    Bestia bestia = lista_bestias.get(be);
+                                    double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
+                                    int anillo = Integer.parseInt(JOptionPane.showInputDialog("Numero anillos"));
+
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Hobits(anillo, nombre, Apellido, altura, fecha_nacimiento, bestia,
+                                            poder, 10.00 * anillo, 100.00 * anillo, 1.00 * anillo));
                                 }
                                 break;
-                                case "3": {
+                                case "4": {//Hombre
+                                    String nombre = JOptionPane.showInputDialog("Ingrese nombre");
+                                    String Apellido = JOptionPane.showInputDialog("Apellido");
+                                    double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
+                                    Date fecha_nacimiento = new Date();
+                                    String b = "";
+                                    for (Bestia u : lista_bestias) {
+                                        b += "\n" + lista_bestias.indexOf(u) + " " + u;
+                                    }
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    Bestia bestia = lista_bestias.get(be);
+                                    double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
 
+                                    double ataque = 150;
+                                    double defensa = 140;
+                                    double curación = 50;
+                                    int army = Integer.parseInt(JOptionPane.showInputDialog("Arma \n"
+                                            + "1-Espada \n"
+                                            + "2-Lanza \n"
+                                            + "3-arco"));
+                                    if (army == 1) {
+                                        ataque = ataque + 150;
+                                    } else if (army == 2) {
+                                        ataque = ataque + 100;
+                                    } else if (army == 3) {
+                                        ataque = ataque + 50;
+                                    }
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Hombres());
+                                    JOptionPane.showMessageDialog(null, "Hecho");
                                 }
                                 break;
-                                case "4": {
+                                case "5": {//Maiar
+                                    String nombre = JOptionPane.showInputDialog("Ingrese nombre");
+                                    String Apellido = JOptionPane.showInputDialog("Apellido");
+                                    double altura = Double.parseDouble(JOptionPane.showInputDialog("altura"));
+                                    Date fecha_nacimiento = new Date();
+                                    String b = "";
+                                    for (Bestia u : lista_bestias) {
+                                        b += "\n" + lista_bestias.indexOf(u) + " " + u;
+                                    }
+                                    int be = Integer.parseInt(JOptionPane.showInputDialog(o + "\n" + "Cual bestia"));
+                                    Bestia bestia = lista_bestias.get(be);
+                                    double poder = Double.parseDouble(JOptionPane.showInputDialog("poder"));
+                                    double ataque = 150;
+                                    double defensa = 140;
+                                    double curación = 50;
 
-                                }
-                                break;
-                                case "5": {
-
+                                    int sombrero = Integer.parseInt(JOptionPane.showInputDialog("Tiene sombrero \n"
+                                            + "1-si \n"
+                                            + "2-no \n"));
+                                    if (sombrero == 1) {
+                                        curación = curación + 200;
+                                        ataque = ataque + 200;
+                                    }
+                                    int baston = Integer.parseInt(JOptionPane.showInputDialog("Tiene baston \n"
+                                            + "1-si \n"
+                                            + "2-no \n"));
+                                    if (baston == 1) {
+                                        ataque = ataque + 200;
+                                    }
+                                    lista_pueblo.get(pueblo).getLugares().get(lugar).getIntegrante().add(new Maiar(baston, sombrero, nombre, Apellido, altura, fecha_nacimiento, bestia, poder, ataque, defensa, curación));
+                                    JOptionPane.showMessageDialog(null, "Hecho");
                                 }
                                 break;
                             }
 
                         }
                         break;
+
                         case "4": {//Bestias
                             String op = JOptionPane.showInputDialog("Ingrese opcion \n"
                                     + "1-Aguilas \n"
@@ -295,8 +440,13 @@ public class Lab3_progra2 {
                             String resp1;
                             int cont1 = 0;
                             JOptionPane.showMessageDialog(null, "A Continuacion se le muestran los pueblos");
+<<<<<<< HEAD
                             for (Bestia lb : lista_bestias) {
                                 JOptionPane.showMessageDialog(null, "[" + cont1 + "]" + lb);
+=======
+                            for (Bestia lp : lista_bestias) {
+                                JOptionPane.showMessageDialog(null, "[" + cont1 + "]" + lp);
+>>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
                                 cont1++;
                             }
                             resp1 = JOptionPane.showInputDialog(null, "Que posicion desea eliminar?");
@@ -308,6 +458,7 @@ public class Lab3_progra2 {
 
                 }
                 break;
+<<<<<<< HEAD
                 case "3": {//Modificar
                     int contad = 0;
                     String respuesta;
@@ -338,6 +489,9 @@ public class Lab3_progra2 {
                             }
                             respuesta2 = JOptionPane.showInputDialog(null, "Ingrese la posicion de la bestia que desea modificar");
                             respu2 = Integer.parseInt(respuesta2);
+=======
+                case "3": {//modificar
+>>>>>>> 064ce34f876fe91c4bc996375b52cf2a3cb30830
 
                             respuesta3 = JOptionPane.showInputDialog(null, "1-Modificar garras \n "
                                     + "2-Modificar veneno");
