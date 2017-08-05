@@ -504,15 +504,15 @@ public class Lab3_progra2 {
                     int respu3;
                     int mod;
                     int mod2;
-                    respuesta = JOptionPane.showInputDialog(null, ""
-                            + "1-Para modificar Pueblos \n");
+
                     String modpueblo;
                     respuesta = JOptionPane.showInputDialog(null, "1-Para modificar Pueblos \n"
                             + "2-Para modificar Bestias \n"
-                            + "3-Para modificar Lugares \n");
+                            + "3-Para modificar Integrante \n");
 
                     respu = Integer.parseInt(respuesta);
                     switch (respu) {
+
                         case 1:
                             for (Pueblo mp : lista_pueblo) {
                                 JOptionPane.showMessageDialog(null, "[" + contad2 + "]" + mp);
@@ -561,6 +561,59 @@ public class Lab3_progra2 {
 
                             break;
                         case 3: {
+
+                            String modp;
+                            int imodp;
+                            String modp2;
+                            int imodp2;
+                            String modp1;
+                            String modp11;
+                            String modificar;
+                            String modificaral;
+                            String modificarap;
+                            int modificaral1;
+                            int imodp1;
+                            int modp121;
+                            JOptionPane.showMessageDialog(null, "Acontinuacion los pueblos");
+                            for (Pueblo mi : lista_pueblo) {
+                                JOptionPane.showMessageDialog(null, mi);
+                            }
+                            modp = JOptionPane.showInputDialog(null, "Ingrese la posicion del pueblo que desea modificar");
+                            imodp = Integer.parseInt(modp);
+                            for (Lugar mip : lista_pueblo.get(imodp).getLugares()) {
+                                JOptionPane.showMessageDialog(null, mip);
+                            }
+                            modp1 = JOptionPane.showInputDialog(null, "Ingrese la posicion del lugar que desea modificar");
+                            imodp1 = Integer.parseInt(modp);
+                            for (Integrante mip1 : lista_pueblo.get(imodp).getLugares().get(imodp1).getIntegrante()) {
+                                JOptionPane.showMessageDialog(null, mip1);
+                            }
+                            modp2 = JOptionPane.showInputDialog(null, "Ingrese la posicion del integrante que desea modificar");
+                            imodp2 = Integer.parseInt(modp2);
+                            modp11 = JOptionPane.showInputDialog(null, "1-Modificar nombre"
+                                    + "2-Mofificar altura"
+                                    + "3-Modificar apellido");
+                            modp121 = Integer.parseInt(modp11);
+                            switch (modp121) {
+                                case 1: {
+                                    modificar = JOptionPane.showInputDialog(null, "Ingrese el nombre al que desea modificar");
+
+                                    lista_pueblo.get(imodp).getLugares().get(imodp1).getIntegrante().get(imodp2).setNombre(modificar);
+                                }
+                                break;
+                                case 2: {
+                                    modificaral = JOptionPane.showInputDialog(null, "Ingrese la altura al que desea modificar");
+                                    modificaral1 = Integer.parseInt(modificaral);
+                                    lista_pueblo.get(imodp).getLugares().get(imodp1).getIntegrante().get(imodp2).setAltura(modificaral1);
+                                }
+                                break;
+                                case 3: {
+                                    modificarap = JOptionPane.showInputDialog(null, "Ingrese el apellido al que desea modificar");
+
+                                    lista_pueblo.get(imodp).getLugares().get(imodp1).getIntegrante().get(imodp2).setApellido(modificarap);
+                                }
+                                break;
+                            }
 
                         }
                         break;
