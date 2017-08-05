@@ -670,7 +670,7 @@ public class Lab3_progra2 {
                                     
                                     ) {
                                 if (cont == 0) {
-
+                                    
                                     cont++;
                                 } else if (cont == 1) {
 
