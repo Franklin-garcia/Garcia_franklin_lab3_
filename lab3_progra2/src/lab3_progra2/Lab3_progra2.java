@@ -609,12 +609,29 @@ public class Lab3_progra2 {
                                 t1 += "\n" + lista_pueblo.get(lug1).getLugares().get(r1).getIntegrante().indexOf(j) + " " + j;
                             }
                             int Integrante2 = Integer.parseInt(JOptionPane.showInputDialog(t1 + "\n" + "Cual integrante"));
-                        
+
+                            int cont = 0;
+                            while (
+                                    lista_pueblo.get(lug).getLugares().get(r).getIntegrante().get(Integrante1).getDefensa()>0 ||
+                                    lista_pueblo.get(lug1).getLugares().get(r1).getIntegrante().get(Integrante2).getDefensa()>0
+                                    
+                                    ) {
+                                if (cont == 0) {
+
+                                    cont++;
+                                } else if (cont == 1) {
+
+                                    cont=0;
+                                }
+                                
+                            }
+
                         }
                         break;
-                        case "2":{//batalla lineal
-                            
-                        }break;
+                        case "2": {//batalla lineal
+
+                        }
+                        break;
                     }
 
                 }
