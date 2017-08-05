@@ -403,7 +403,8 @@ public class Lab3_progra2 {
                         }
                         break;
                     }
-                }break;
+                }
+                break;
 
                 case "2": {//eliminar
                     String r = JOptionPane.showInputDialog(null, "1-Eliminar Pueblo \n"
@@ -486,6 +487,8 @@ public class Lab3_progra2 {
                     }
 
                 }
+                break;
+////////////////////////////////////////////////////////////////777                /
                 case "3": {//Modificar
                     int contad = 0;
                     int contad2 = 0;
@@ -510,20 +513,17 @@ public class Lab3_progra2 {
 
                     respu = Integer.parseInt(respuesta);
                     switch (respu) {
-
-                        
-
                         case 1:
-                             for (Pueblo mp : lista_pueblo) {
+                            for (Pueblo mp : lista_pueblo) {
                                 JOptionPane.showMessageDialog(null, "[" + contad2 + "]" + mp);
                                 contad2++;
                             }
-                              respuesta22 = JOptionPane.showInputDialog(null, "Ingrese la posicion del pueblo que desea modificar");
+                            respuesta22 = JOptionPane.showInputDialog(null, "Ingrese la posicion del pueblo que desea modificar");
                             respu22 = Integer.parseInt(respuesta22);
-                            modpueblo=JOptionPane.showInputDialog(null,"Ingrese nuevo nombre del pueblo");
-                             lista_pueblo.get(respu22).setNombre(modpueblo);
+                            modpueblo = JOptionPane.showInputDialog(null, "Ingrese nuevo nombre del pueblo");
+                            lista_pueblo.get(respu22).setNombre(modpueblo);
                             break;
-                           
+
                         case 2:
                             for (Bestia mb : lista_bestias) {
                                 JOptionPane.showMessageDialog(null, "[" + contad + "]" + mb);
@@ -558,18 +558,64 @@ public class Lab3_progra2 {
                                 }
 
                             }
-                            
-                        break;
+
+                            break;
                         case 3: {
-                            
+
                         }
                         break;
                     }
                 }
-
                 break;
+///////////////////////////////////////////////////////////////////////////77
+                case "4": {//simulacion
+                    String f = JOptionPane.showInputDialog("1-simulacion unica \n"
+                            + "2-Simulacion lineal \n");
+                    switch (f) {
+                        case "1": {//batalla unica
+                            String el = "";
+                            for (Pueblo p : lista_pueblo) {
+                                el += "\n" + lista_pueblo.indexOf(p) + " " + p;
+                            }
+                            int lug = Integer.parseInt(JOptionPane.showInputDialog(el + "\n" + "cual lugar"));
 
-                case "4": {
+                            String e = "";
+                            for (Lugar j : lista_pueblo.get(lug).getLugares()) {
+                                e += "\n" + lista_pueblo.get(lug).getLugares().indexOf(j) + " " + j;
+                            }
+                            int r = Integer.parseInt(JOptionPane.showInputDialog(e + "\n" + "Cual lugar"));
+
+                            String t = "";
+                            for (Integrante j : lista_pueblo.get(lug).getLugares().get(r).getIntegrante()) {
+                                t += "\n" + lista_pueblo.get(lug).getLugares().get(r).getIntegrante().indexOf(j) + " " + j;
+                            }
+                            int Integrante1 = Integer.parseInt(JOptionPane.showInputDialog(t + "\n" + "Cual integrante"));
+
+                            //------------------------------------------------------------------------------------------
+                            String el1 = "";
+                            for (Pueblo p : lista_pueblo) {
+                                el1 += "\n" + lista_pueblo.indexOf(p) + " " + p;
+                            }
+                            int lug1 = Integer.parseInt(JOptionPane.showInputDialog(el1 + "\n" + "cual lugar"));
+
+                            String e1 = "";
+                            for (Lugar j : lista_pueblo.get(lug1).getLugares()) {
+                                e1 += "\n" + lista_pueblo.get(lug1).getLugares().indexOf(j) + " " + j;
+                            }
+                            int r1 = Integer.parseInt(JOptionPane.showInputDialog(e + "\n" + "Cual lugar"));
+
+                            String t1 = "";
+                            for (Integrante j : lista_pueblo.get(lug1).getLugares().get(r1).getIntegrante()) {
+                                t1 += "\n" + lista_pueblo.get(lug1).getLugares().get(r1).getIntegrante().indexOf(j) + " " + j;
+                            }
+                            int Integrante2 = Integer.parseInt(JOptionPane.showInputDialog(t1 + "\n" + "Cual integrante"));
+                        
+                        }
+                        break;
+                        case "2":{//batalla lineal
+                            
+                        }break;
+                    }
 
                 }
                 break;
