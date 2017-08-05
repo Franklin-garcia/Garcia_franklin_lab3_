@@ -403,7 +403,7 @@ public class Lab3_progra2 {
                         }
                         break;
                     }
-                }
+                }break;
 
                 case "2": {//eliminar
                     String r = JOptionPane.showInputDialog(null, "1-Eliminar Pueblo \n"
@@ -488,29 +488,42 @@ public class Lab3_progra2 {
                 }
                 case "3": {//Modificar
                     int contad = 0;
+                    int contad2 = 0;
                     String respuesta;
                     String respuesta2;
+                    String respuesta22;
                     String respuesta3;
                     String modif;
                     String modif2;
                     int respu;
                     int respu2;
+                    int respu22;
                     int respu3;
                     int mod;
                     int mod2;
                     respuesta = JOptionPane.showInputDialog(null, ""
-                            + "1-Para modificar Pueblos \n"
+                            + "1-Para modificar Pueblos \n");
+                    String modpueblo;
+                    respuesta = JOptionPane.showInputDialog(null, "1-Para modificar Pueblos \n"
                             + "2-Para modificar Bestias \n"
                             + "3-Para modificar Lugares \n");
 
                     respu = Integer.parseInt(respuesta);
                     switch (respu) {
 
-                        case 1: {
-                            
-                        }
-                        break;
+                        
 
+                        case 1:
+                             for (Pueblo mp : lista_pueblo) {
+                                JOptionPane.showMessageDialog(null, "[" + contad2 + "]" + mp);
+                                contad2++;
+                            }
+                              respuesta22 = JOptionPane.showInputDialog(null, "Ingrese la posicion del pueblo que desea modificar");
+                            respu22 = Integer.parseInt(respuesta22);
+                            modpueblo=JOptionPane.showInputDialog(null,"Ingrese nuevo nombre del pueblo");
+                             lista_pueblo.get(respu22).setNombre(modpueblo);
+                            break;
+                           
                         case 2:
                             for (Bestia mb : lista_bestias) {
                                 JOptionPane.showMessageDialog(null, "[" + contad + "]" + mb);
@@ -546,6 +559,11 @@ public class Lab3_progra2 {
 
                             }
                             
+                        break;
+                        case 3: {
+                            
+                        }
+                        break;
                     }
                 }
 
